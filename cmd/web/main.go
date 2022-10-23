@@ -13,7 +13,7 @@ import (
 	"test-eth/internal/handlers"
 )
 
-var portNum = os.Getenv("PORT")
+var portNum = fmt.Sprintf(":%s", os.Getenv("PORT"))
 var client *driver.DB
 var repo *handlers.Repository
 
